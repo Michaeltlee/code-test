@@ -6,23 +6,21 @@ commits reguarly so we can track your progress.
 
 ### Getting Started
 
-1. Fork the [code challenge](https://github.com/furthered/code-test) repository on Github
-2. Run composer install
-3. Perform the configuration for a [fresh install of Laravel](https://laravel.com/docs/7.x)
-4. Update the first line of this README with your name (so that it reads "Hello, YOUR NAME!"). Commit this change. This
-will serve as a starting timestamp.
-5. Complete the exercise below.
-6. Commit progress regularly.
-7. When your're done, upload your code.
-8. Email James [james.terrono@furthered.com](mailto:james.terrono@furthered.com) with any questions/issues
+1. Fork this repository on Github
+2. Update the first line of this README with your name (so that it reads "Hello, YOUR NAME!"). Commit this change. This
+will serve as a starting timestamp
+3. Complete the exercise below
+4. Commit progress regularly
+5. When your're done, upload your code
+6. Email Oi [oiwomark@furthered.com](mailto:oiwomark@furthered.com) with any questions/issues
 
 ### Requirements
 
-- You have up to 48 hours to submit.
-- Create a simple RESTful API written in Laravel/PHP.
+- You have up to 48 hours to submit
+- Create a simple RESTful API written in Laravel (latest version)
     - All responses should be JSON
     - All requests should be JSON
-- Simple UI Interface implemented in a JS Framework (plus if vue)
+- Simple UI Interface implemented in a JS Framework (plus if Vue)
 
 ## The Exercise
 
@@ -80,10 +78,6 @@ The following requests should be implemented:
 - Remove product from requesting user
 - List products attached to requesting user
 
-#### Tests
-
-You must write tests to back up your code. You are free to use any testing tools or frameworks you like.
-
 ### UI
 
 Create a simple ui interface, written in your favorite JS Framework (Preferred: VueJS) for a user to
@@ -93,18 +87,20 @@ Create a simple ui interface, written in your favorite JS Framework (Preferred: 
 **Bonus*
 - Authenticate
 - Add/Remove products
-
+- Writing tests (both backend and frontend) to backup your code is a huge plus
 
 ## Completion
 
-When you are finished you will push up the application to a personal git repo. Then please notify James via email
-[james.terrono@furthered.com](mailto:james.terrono@furthered.com?subject=Lawline%20Code%20Challenge) with the subject Lawline Code Challenge and the link to the github repo. Please include:
+When you are finished, you will push up the application to a personal git repo. Then please notify Oi via email
+[oiwomark@furthered.com](mailto:oiwomark@furthered.com?subject=Lawline%20Code%20Challenge) with the subject line Lawline Coding Excerise. Please include:
 
+- The link to the github repo
+- Instructions on how to setup the local site
 - Instructions on how to create and seed database tables
 - Instructions on how authentication works
-- Instructions on how to compile assets (if anything)
-- Anything else you think James should know to run the application (if anything)
+- Instructions on how to compile assets (if any)
+- Anything else you think is worth mentioning to run the application
 
-James is available for any questions you may have via email at james.terrono@furthered.com.
+Email us for any questions regarding this coding excerise at oiwomark@furthered.com.
 
 ![Good Luck](http://www.reactiongifs.us/wp-content/uploads/2014/01/good_luck_morgan_freeman.gif)
