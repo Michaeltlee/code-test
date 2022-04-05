@@ -1,4 +1,4 @@
-Hello ____! Thank you for considering joining the Lawline team. Below is a coding exercise that will allow you
+Hello, ____! Thank you for considering joining the Lawline team. Below is a coding exercise that will allow you
 to highlight your skills.
 
 You have up to 48 hours to submit, however, we respect your time and expect this to only take a few hours. Please make
@@ -11,7 +11,7 @@ commits reguarly so we can track your progress.
 will serve as a starting timestamp
 3. Complete the exercise below
 4. Commit progress regularly
-5. When your're done, upload your code
+5. When you're done, commit all your code except any dependencies
 6. Email Oi [oiwomark@furthered.com](mailto:oiwomark@furthered.com) with any questions/issues
 
 ### Requirements
