@@ -91,11 +91,23 @@ The following requests should be implemented:
 - [x] Remove product from requesting user
 - [x] List products attached to requesting user
 
+| Description                               | Route                                     | Method | Notes                                   |
+| :---------------------------------------- | :---------------------------------------- | :----- | :-------------------------------------- |
+| Add product                               | `/api/product`                            | POST   | All fields required except ID and image |
+| Update product                            | `/api/products/{product}`                 | PUT    | All fields required except image        |
+| Delete product                            | `/api/products/{product}`                 | DELETE |                                         |
+| Get product                               | `/api/products/{product}`                 | GET    |                                         |
+| Upload product image                      | `/api/products/{product}/image`           | POST   |                                         |
+| Get list of all products                  | `/api/products`                           | GET    |                                         |
+| Attach product to requesting user         | `/api/users/products/{product}`           | POST   |                                         |
+| Remove product from requesting user       | `/api/users/products/{product}`           | DELETE |                                         |
+| List products attached to requesting user | `/api/users/products`                     | GET    |                                         |
+
 ### UI
 
 Create a simple ui interface, written in your favorite JS Framework (Preferred: VueJS) for a user to
 
-- View all available products
+- [ ] View all available products
 
 **Bonus*
 - Authenticate
@@ -108,10 +120,15 @@ When you are finished, you will push up the application to a personal git repo. 
 [oiwomark@furthered.com](mailto:oiwomark@furthered.com?subject=Lawline%20Code%20Challenge) with the subject line Lawline Coding Exercise. Please include:
 
 - The link to the github repo
+    - https://github.com/Michaeltlee/code-test
 - Instructions on how to setup the local site
 - Instructions on how to create and seed database tables
+    - [ ] `php artisan migrate`
+    - [ ] `php artisan db:seed`
 - Instructions on how authentication works
+    - [ ] Laravel Sanctum
 - Instructions on how to compile assets (if any)
+    - [ ] `composer install && npm install`
 - Anything else you think is worth mentioning to run the application
 
 Email us for any questions regarding this coding exercise at oiwomark@furthered.com.
