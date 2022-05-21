@@ -42,7 +42,15 @@ Each user must have, but is not limited to:
 
 - These users are the only users that are able to make requests via the API.
 - User creation/maintenance is not done through the API (see Database section below).
-- Users can own many products
+- [x] Users can own many products
+
+#### ProductUser Pivot
+
+product_user
+
+- [x] id
+- [x] user_id
+- [x] product_id
 
 #### Products
 
@@ -63,7 +71,9 @@ Each product must have, but is not limited to:
 
 #### Authentication
 
-You must implement an authentication system so that the API knows which of the users is making the request. All requests should ensure that an authorized user is making the request. In the event of an unauthorized user, an error should be thrown.
+You must implement an authentication system so that the API knows which of the users is making the request. 
+
+- [x] All requests should ensure that an authorized user is making the request. In the event of an unauthorized user, an error should be thrown.
 
 #### Requests
 
@@ -76,10 +86,10 @@ The following requests should be implemented:
 - [x] Get product
 - [x] Upload product image
 - [x] Get list of all products
-- [ ] Attach a product to requesting user
-    - [ ] User must have an active subscription
-- [ ] Remove product from requesting user
-- [ ] List products attached to requesting user
+- [x] Attach a product to requesting user
+    - [x] User must have an active subscription
+- [x] Remove product from requesting user
+- [x] List products attached to requesting user
 
 ### UI
 

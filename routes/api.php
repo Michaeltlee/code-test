@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductImageController;
+use App\Http\Controllers\UserProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,7 @@ Route::put('/products/{product}', [ProductController::class, 'update'])->name('p
 Route::delete('/products/{product}', [ProductController::class, 'delete'])->name('product.delete');
 
 Route::put('/product/{product}/image', [ProductImageController::class, 'update'])->name('product.image.update');
+
+Route::get('/users/products', [UserProductController::class, 'index'])->name('user.product.index');
+Route::post('/users/products/{product}', [UserProductController::class, 'create'])->name('user.product.add');
+Route::delete('/users/products/{product}', [UserProductController::class, 'delete'])->name('user.product.remove');

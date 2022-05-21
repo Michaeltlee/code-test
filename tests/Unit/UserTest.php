@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -71,5 +72,39 @@ class UserTest extends TestCase
 
         $user->update(['has_active_subscription' => true]);
         $this->assertTrue($user->canAddProduct());
+    }
+
+    /** @test */
+    public function can_add_a_product_to_a_users_account()
+    {
+        $user = User::factory()->create();
+
+        $this->assertCount(0, $user->products()->get());
+
+        $product = Product::factory()->create();
+
+        $user->products()->attach($product->id);
+
+        $this->assertCount(1, $user->products()->get());
+    }
+
+    /** @test */
+    public function can_remove_a_product_from_a_users_account()
+    {
+        $user = User::factory()->create();
+
+        $this->assertCount(0, $user->products()->get());
+
+        $product = Product::factory()->create();
+        $product2 = Product::factory()->create();
+
+        $user->products()->attach($product->id);
+        $user->products()->attach($product2->id);
+
+        $this->assertCount(2, $user->products()->get());
+
+        $user->products()->detach($product->id);
+
+        $this->assertCount(1, $user->products()->get());
     }
 }
