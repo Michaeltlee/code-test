@@ -4,7 +4,7 @@ Hello, Michael! Thank you for considering joining the Lawline team. Below is a c
 to highlight your skills.
 
 You have up to 48 hours to submit, however, we respect your time and expect this to only take a few hours. Please make
-commits reguarly so we can track your progress.
+commits regularly so we can track your progress.
 
 ### Getting Started
 
@@ -57,7 +57,7 @@ Each product must have, but is not limited to:
 #### Database
 
 - MySQL
-- All tables in the database must be created programatically
+- All tables in the database must be created programmatically
 - The user table should be seeded with at least five users
 
 #### Authentication
@@ -84,7 +84,7 @@ The following requests should be implemented:
 
 Create a simple ui interface, written in your favorite JS Framework (Preferred: VueJS) for a user to
 
-- View all avaliable products
+- View all available products
 
 **Bonus*
 - Authenticate
@@ -94,7 +94,7 @@ Create a simple ui interface, written in your favorite JS Framework (Preferred: 
 ## Completion
 
 When you are finished, you will push up the application to a personal git repo. Then please notify Oi via email
-[oiwomark@furthered.com](mailto:oiwomark@furthered.com?subject=Lawline%20Code%20Challenge) with the subject line Lawline Coding Excerise. Please include:
+[oiwomark@furthered.com](mailto:oiwomark@furthered.com?subject=Lawline%20Code%20Challenge) with the subject line Lawline Coding Exercise. Please include:
 
 - The link to the github repo
 - Instructions on how to setup the local site
@@ -103,6 +103,6 @@ When you are finished, you will push up the application to a personal git repo. 
 - Instructions on how to compile assets (if any)
 - Anything else you think is worth mentioning to run the application
 
-Email us for any questions regarding this coding excerise at oiwomark@furthered.com.
+Email us for any questions regarding this coding exercise at oiwomark@furthered.com.
 
 ![Good Luck](http://www.reactiongifs.us/wp-content/uploads/2014/01/good_luck_morgan_freeman.gif)
