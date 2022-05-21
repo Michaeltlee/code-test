@@ -72,16 +72,4 @@ class UserTest extends TestCase
         $user->update(['has_active_subscription' => true]);
         $this->assertTrue($user->canAddProduct());
     }
-
-    /**
-     * @test
-     *
-     * @return void
-     */
-    public function user_has_products_relationship()
-    {
-        $user = User::factory()->create();
-
-        $this->assertCount(0, $user->products->all());
-    }
 }
