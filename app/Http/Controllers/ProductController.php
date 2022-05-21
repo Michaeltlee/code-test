@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -21,11 +22,16 @@ class ProductController extends Controller
             'image'       => 'file',
         ]);
 
+        $path = null;
+        if ($request->hasFile('image')) {
+            $path = Storage::disk('product-images')->putFile('product-images', $request->file('image'));
+        }
+
         $product = Product::create([
             'name'        => $request->name,
             'description' => $request->description,
             'price'       => $request->price,
-            'image'       => $request->image,
+            'image'       => $path,
         ]);
 
         return response()->json([
@@ -47,11 +53,16 @@ class ProductController extends Controller
             'image'       => 'file',
         ]);
 
+        $path = null;
+        if ($request->hasFile('image')) {
+            $path = Storage::disk('product-images')->putFile('product-images', $request->file('image'));
+        }
+
         $product->update([
             'name'        => $request->name,
             'description' => $request->description,
             'price'       => $request->price,
-            'image'       => $request->image,
+            'image'       => $path,
         ]);
 
         return response()->json([
