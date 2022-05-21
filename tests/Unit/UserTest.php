@@ -54,4 +54,22 @@ class UserTest extends TestCase
         $this->expectException(\Illuminate\Database\QueryException::class);
         User::factory()->create(['email' => null]);
     }
+
+    /**
+     * @test
+     *
+     * @return void
+     */
+    public function can_check_user_for_an_active_subscription()
+    {
+        // TODO: create a Subscription model
+        // TODO: create a User-Subscription relation
+        // Set this as an attribute on the User model for now.
+        $user = User::factory()->create(['has_active_subscription' => false]);
+
+        $this->assertFalse($user->canAddProduct());
+
+        $user->update(['has_active_subscription' => true]);
+        $this->assertTrue($user->canAddProduct());
+    }
 }
