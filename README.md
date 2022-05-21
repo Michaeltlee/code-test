@@ -33,10 +33,10 @@ products within their account. A user must have an active subscription to add a 
 
 Each user must have, but is not limited to:
 
-- ID
-- First Name
-- Last Name
-- Email (unique)
+- [x] ID
+- [x] First Name
+- [x] Last Name
+- [x] Email (unique)
 
 **Please note:**
 
@@ -59,6 +59,7 @@ Each product must have, but is not limited to:
 - MySQL
 - All tables in the database must be created programmatically
 - The user table should be seeded with at least five users
+    - [ ] Run `php artisan db:seed` to seed the database with 10 users.
 
 #### Authentication
 
