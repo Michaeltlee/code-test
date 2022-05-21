@@ -74,7 +74,7 @@ The following requests should be implemented:
     - [x] All fields required except image
 - [x] Delete product
 - [x] Get product
-- [ ] Upload product image
+- [x] Upload product image
 - [x] Get list of all products
 - [ ] Attach a product to requesting user
     - [ ] User must have an active subscription
