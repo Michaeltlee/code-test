@@ -48,11 +48,11 @@ Each user must have, but is not limited to:
 
 Each product must have, but is not limited to:
 
-- ID
-- Name
-- Description
-- Price
-- Image
+- [x] ID
+- [x] Name
+- [x] Description
+- [x] Price
+- [x] Image
 
 #### Database
 
@@ -68,18 +68,18 @@ You must implement an authentication system so that the API knows which of the u
 #### Requests
 
 The following requests should be implemented:
-
-- Add product
-    - All fields required except ID and image
-- Update product
-    - All fields required except image
-- Delete product
-- Get product
-- Upload product image
-- Get list of all products
-- Attach product to requesting user
-- Remove product from requesting user
-- List products attached to requesting user
+- [x] Add product
+    - [x] All fields required except ID and image
+- [x] Update product
+    - [x] All fields required except image
+- [x] Delete product
+- [x] Get product
+- [ ] Upload product image
+- [x] Get list of all products
+- [ ] Attach a product to requesting user
+    - [ ] User must have an active subscription
+- [ ] Remove product from requesting user
+- [ ] List products attached to requesting user
 
 ### UI
 
