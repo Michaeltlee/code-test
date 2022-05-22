@@ -21,9 +21,3 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
-Route::get('/products', function () {
-    return view('product.index', [
-        'products' => Product::all(),
-    ]);
-})->name('product.index');
