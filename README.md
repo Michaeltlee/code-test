@@ -19,9 +19,9 @@ will serve as a starting timestamp
 ### Requirements
 
 - You have up to 48 hours to submit
-- Create a simple RESTful API written in Laravel (latest version)
-    - All responses should be JSON
-    - All requests should be JSON
+- [x] Create a simple RESTful API written in Laravel (latest version)
+    - [x] All responses should be JSON
+    - [x] All requests should be JSON
 - Simple UI Interface implemented in a JS Framework (plus if Vue)
 
 ## The Exercise
@@ -107,12 +107,12 @@ The following requests should be implemented:
 
 Create a simple ui interface, written in your favorite JS Framework (Preferred: VueJS) for a user to
 
-- [ ] View all available products
+- [x] View all available products
 
 **Bonus*
-- Authenticate
-- Add/Remove products
-- Writing tests (both backend and frontend) to backup your code is a huge plus
+- [x] Authenticate
+- [ ] Add/Remove products
+- [ ] Writing tests (both backend and frontend) to backup your code is a huge plus
 
 ## Completion
 
@@ -122,7 +122,10 @@ When you are finished, you will push up the application to a personal git repo. 
 - The link to the github repo
     - https://github.com/Michaeltlee/code-test
 - Instructions on how to setup the local site
+    - `php artisan serve`
+    - 127.0.0.1:8000/products
 - Instructions on how to create and seed database tables
+    - https://laravel.com/docs/9.x/database#sqlite-configuration
     - [ ] `php artisan migrate`
     - [ ] `php artisan db:seed`
 - Instructions on how authentication works

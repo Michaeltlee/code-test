@@ -1,10 +1,14 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
+
+defineProps({
+    products: Array,
+})
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Dashboard"/>
 
     <BreezeAuthenticatedLayout>
         <template #header>
@@ -17,7 +21,20 @@ import { Head } from '@inertiajs/inertia-vue3';
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        You're logged in!
+                        <ul>
+                            <li v-for="product in products"
+                                class="mb-5">
+                                <div>
+                                    {{ product.id }} | {{ product.name }}
+                                </div>
+                                <p>
+                                    ${{ product.price / 100 }}
+                                </p>
+                                <p>
+                                    {{ product.description }}
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
