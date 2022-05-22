@@ -20,7 +20,7 @@ class ProductControllerTest extends TestCase
 
         $this->expectException(\Illuminate\Auth\AuthenticationException::class);
 
-        $this->postJson(route('product.create'), [
+        $this->postJson(route('api.product.create'), [
             'name'        => 'first product',
             'description' => 'Description of the first product',
             'price'       => 2000,
@@ -32,7 +32,7 @@ class ProductControllerTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $response = $this->actingAs(User::factory()->create())->postJson(route('product.create'), [
+        $response = $this->actingAs(User::factory()->create())->postJson(route('api.product.create'), [
             'name'        => 'first product',
             'description' => 'Description of the first product',
             'price'       => 2000,
@@ -49,7 +49,7 @@ class ProductControllerTest extends TestCase
         Storage::fake('product-images');
         $this->withoutExceptionHandling();
 
-        $response = $this->actingAs(User::factory()->create())->postJson(route('product.create'), [
+        $response = $this->actingAs(User::factory()->create())->postJson(route('api.product.create'), [
             'name'        => 'first product',
             'description' => 'Description of the first product',
             'price'       => 2000,
@@ -72,7 +72,7 @@ class ProductControllerTest extends TestCase
             'price' => 2000,
         ]);
 
-        $response = $this->actingAs(User::factory()->create())->putJson(route('product.update', $product), [
+        $response = $this->actingAs(User::factory()->create())->putJson(route('api.product.update', $product), [
             'name'        => 'NEW: first product',
             'description' => 'Description of the NEW first product',
             'price'       => 3000,
@@ -100,7 +100,7 @@ class ProductControllerTest extends TestCase
 
         $image = UploadedFile::fake()->image('product-image.jpg');
 
-        $response = $this->actingAs(User::factory()->create())->putJson(route('product.update', $product), [
+        $response = $this->actingAs(User::factory()->create())->putJson(route('api.product.update', $product), [
             'name'        => 'NEW: first product',
             'description' => 'Description of the NEW first product',
             'price'       => 3000,
@@ -128,7 +128,7 @@ class ProductControllerTest extends TestCase
             'price' => 2000,
         ]);
 
-        $response = $this->actingAs(User::factory()->create())->deleteJson(route('product.delete', $product));
+        $response = $this->actingAs(User::factory()->create())->deleteJson(route('api.product.delete', $product));
 
         $response->assertStatus(200);
 
@@ -144,7 +144,7 @@ class ProductControllerTest extends TestCase
             'price' => 2000,
         ]);
 
-        $response = $this->actingAs(User::factory()->create())->getJson(route('product.show', $product));
+        $response = $this->actingAs(User::factory()->create())->getJson(route('api.product.show', $product));
 
         $response->assertStatus(200)->assertJson([
             'name'        => $product->name,
@@ -161,7 +161,7 @@ class ProductControllerTest extends TestCase
 
         Product::factory()->count(5)->create();
 
-        $response = $this->actingAs(User::factory()->create())->getJson(route('product.index'));
+        $response = $this->actingAs(User::factory()->create())->getJson(route('api.product.index'));
 
         $response->assertStatus(200);
     }

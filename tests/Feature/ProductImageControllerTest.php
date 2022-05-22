@@ -21,7 +21,7 @@ class ProductImageControllerTest extends TestCase
         $image = UploadedFile::fake()->image('product-image.jpg');
         $product = Product::factory()->create();
 
-        $response = $this->actingAs(User::factory()->create())->putJson(route('product.image.update', $product), [
+        $response = $this->actingAs(User::factory()->create())->putJson(route('api.product.image.update', $product), [
             'image' => $image,
         ]);
 

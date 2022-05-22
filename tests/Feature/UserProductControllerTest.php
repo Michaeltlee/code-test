@@ -33,7 +33,7 @@ class UserProductControllerTest extends TestCase
 
         $product = Product::factory()->create();
 
-        $response = $this->actingAs($user)->postJson(route('user.product.add', $product));
+        $response = $this->actingAs($user)->postJson(route('api.user.product.add', $product));
 
         $response->assertStatus(200);
 
@@ -53,7 +53,7 @@ class UserProductControllerTest extends TestCase
         $user->products()->attach($product->id);
 
         $response = $this->actingAs($user)
-                         ->deleteJson(route('user.product.remove', $product));
+                         ->deleteJson(route('api.user.product.remove', $product));
 
         $response->assertStatus(200);
 
@@ -72,7 +72,7 @@ class UserProductControllerTest extends TestCase
 
         $user->products()->attach([1, 2, 3]);
 
-        $response = $this->actingAs($user)->getJson(route('user.product.index'));
+        $response = $this->actingAs($user)->getJson(route('api.user.product.index'));
 
         $this->assertCount(3, $response->json('products'));
     }

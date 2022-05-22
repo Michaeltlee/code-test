@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/product', [ProductController::class, 'create'])->name('product.create');
-Route::get('/products', [ProductController::class, 'index'])->name('product.index');
-Route::get('/products/{product}', [ProductController::class, 'show'])->name('product.show');
-Route::put('/products/{product}', [ProductController::class, 'update'])->name('product.update');
-Route::delete('/products/{product}', [ProductController::class, 'delete'])->name('product.delete');
+Route::post('/product', [ProductController::class, 'create'])->name('api.product.create');
+Route::get('/products', [ProductController::class, 'index'])->name('api.product.index');
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('api.product.show');
+Route::put('/products/{product}', [ProductController::class, 'update'])->name('api.product.update');
+Route::delete('/products/{product}', [ProductController::class, 'delete'])->name('api.product.delete');
 
-Route::put('/product/{product}/image', [ProductImageController::class, 'update'])->name('product.image.update');
+Route::put('/product/{product}/image', [ProductImageController::class, 'update'])->name('api.product.image.update');
 
-Route::get('/users/products', [UserProductController::class, 'index'])->name('user.product.index');
-Route::post('/users/products/{product}', [UserProductController::class, 'create'])->name('user.product.add');
-Route::delete('/users/products/{product}', [UserProductController::class, 'delete'])->name('user.product.remove');
+Route::get('/users/products', [UserProductController::class, 'index'])->name('api.user.product.index');
+Route::post('/users/products/{product}', [UserProductController::class, 'create'])->name('api.user.product.add');
+Route::delete('/users/products/{product}', [UserProductController::class, 'delete'])->name('api.user.product.remove');
