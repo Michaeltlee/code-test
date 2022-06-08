@@ -1,28 +1,10 @@
-Hello, YOUR NAME!
-
-Hello, Michael! Thank you for considering joining the Lawline team. Below is a coding exercise that will allow you
-to highlight your skills.
-
-You have up to 48 hours to submit, however, we respect your time and expect this to only take a few hours. Please make
-commits regularly so we can track your progress.
-
-### Getting Started
-
-1. Fork this repository on Github
-2. Update the first line of this README with your name (so that it reads "Hello, YOUR NAME!"). Commit this change. This
-will serve as a starting timestamp
-3. Complete the exercise below
-4. Commit progress regularly
-5. When you're done, commit all your code except any dependencies
-6. Email Oi [oiwomark@furthered.com](mailto:oiwomark@furthered.com) with any questions/issues
-
 ### Requirements
 
 - You have up to 48 hours to submit
 - [x] Create a simple RESTful API written in Laravel (latest version)
     - [x] All responses should be JSON
     - [x] All requests should be JSON
-- Simple UI Interface implemented in a JS Framework (plus if Vue)
+- [x] Simple UI Interface implemented in a JS Framework (plus if Vue)
 
 ## The Exercise
 
@@ -113,27 +95,17 @@ Create a simple ui interface, written in your favorite JS Framework (Preferred: 
 - [x] Authenticate
 - [ ] Add/Remove products
 - [ ] Writing tests (both backend and frontend) to backup your code is a huge plus
+    - [x] Writing tests for backend
+    - [ ] Writing tests for frontend
 
 ## Completion
 
-When you are finished, you will push up the application to a personal git repo. Then please notify Oi via email
-[oiwomark@furthered.com](mailto:oiwomark@furthered.com?subject=Lawline%20Code%20Challenge) with the subject line Lawline Coding Exercise. Please include:
-
-- The link to the github repo
-    - https://github.com/Michaeltlee/code-test
-- Instructions on how to setup the local site
+- How to setup the local site
     - `php artisan serve`
     - 127.0.0.1:8000/products
 - Instructions on how to create and seed database tables
     - https://laravel.com/docs/9.x/database#sqlite-configuration
     - [ ] `php artisan migrate`
     - [ ] `php artisan db:seed`
-- Instructions on how authentication works
-    - [ ] Laravel Sanctum
-- Instructions on how to compile assets (if any)
+- Compile assets (if any)
     - [ ] `composer install && npm install`
-- Anything else you think is worth mentioning to run the application
-
-Email us for any questions regarding this coding exercise at oiwomark@furthered.com.
-
-![Good Luck](http://www.reactiongifs.us/wp-content/uploads/2014/01/good_luck_morgan_freeman.gif)
